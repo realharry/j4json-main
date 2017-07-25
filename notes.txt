@@ -1,0 +1,36 @@
+config file support?
+including comments, etc. ???
+
+
+[ Why minijson? ]
+
+* flexible.
+* different api. partial parsing/buidling
+* building blocks. you can build your own json parser/builder.
+* ..
+
+e.g., 
+(1) field type is int, but in json, use string.
+    ( type=3 --> "google account", etc...)
+(2) an object may need to be differntly serialized based on where it is used.
+    e.g., if it's stand-alone, serialize one way,
+          if it's a field of another object, serialize another way,...
+(3) or, "depth" dependent
+....
+
+Another use case:
+
+Json string payload.
+Need to change one field. (string substitution?)
+Or, even change some "leaf" objects, etc.
+Old method: build a full object from the json string.
+            Do modification.
+            Build a new json string.
+  
+MiniJson:   Build a partial object.
+            do modification.
+            Build a new json string.
+
+
+
+

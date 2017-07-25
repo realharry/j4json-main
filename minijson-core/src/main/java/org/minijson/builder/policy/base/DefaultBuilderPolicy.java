@@ -15,9 +15,14 @@ public class DefaultBuilderPolicy extends AbstractBuilderPolicy implements Build
     public static final BuilderPolicy NODRILLDOWN = new DefaultBuilderPolicy(1, false, 0);
     public static final BuilderPolicy NOINSPECT = new DefaultBuilderPolicy(2, false, 0);
     // Default ?
-    public static final BuilderPolicy SIMPLE = new DefaultBuilderPolicy(1, true, 0);
+    // Note: java.beans packages not supported in Android!!!
+    //public static final BuilderPolicy SIMPLE = new DefaultBuilderPolicy(1, true, 0);
+    public static final BuilderPolicy SIMPLE = new DefaultBuilderPolicy(1, false, 0);
     // MiniJson default. Up to 10 levels.
-    public static final BuilderPolicy MINIJSON = new DefaultBuilderPolicy(10, true, 0);
+    //public static final BuilderPolicy MINIJSON = new DefaultBuilderPolicy(10, true, 0);
+    public static final BuilderPolicy MINIJSON = new DefaultBuilderPolicy(10, false, 0);
+    // Android default???
+    public static final BuilderPolicy ANDROID = new DefaultBuilderPolicy(3, false, 0);
     // "deep"
     public static final BuilderPolicy BEANDRILLDOWN = new DefaultBuilderPolicy(-1, true, 0);
     // "deep"

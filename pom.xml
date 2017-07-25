@@ -3,18 +3,18 @@
   <modelVersion>4.0.0</modelVersion>
 
 <!--   For OSSRH on SonaType  -->
-<!--  -->
+<!--
   <parent>
     <groupId>org.sonatype.oss</groupId>
     <artifactId>oss-parent</artifactId>
     <version>7</version>
   </parent>
-<!--  -->
+-->
 
 
-  <groupId>org.aerysoft.minijson</groupId>
+  <groupId>org.minijson</groupId>
   <artifactId>minijson</artifactId>
-  <version>0.9.3-SNAPSHOT</version>
+  <version>0.9.5-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>MiniJSON</name>
@@ -52,21 +52,40 @@
     <!-- github server corresponds to entry in ~/.m2/settings.xml -->
 <!--
     <github.global.server>github.harrywye</github.global.server>
--->
     <github.global.server>github.harrywye.ghsite</github.global.server>
+-->
   </properties>
 
   <scm>
-    <connection>scm:git:ssh://github.com/harrywye/minijson.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/harrywye/minijson.git</developerConnection>
-    <url>https://github.com/harrywye/minijson</url>
+    <connection>scm:git:ssh://bitbucket.org/javalib/minijson.git</connection>
+    <developerConnection>scm:git:ssh://git@bitbucket.org/javalib/minijson.git</developerConnection>
+    <url>https://bitbucket.org/javalib/minijson</url>
     <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
 
+    <snapshotRepository>
+      <id>staging.repo.snapshots</id>
+      <name>Remote Staging Repository - Snapshots</name>
+      <url>file://${user.home}/projects/minirepo/snapshots/</url>
+<!--
+      <url>file:///projects/minirepo/snapshots/</url>
+-->
+    </snapshotRepository>
+    <repository>
+      <id>staging.repo.releases</id>
+      <name>Remote Staging Repository - Releases</name>
+      <url>file://${user.home}/projects/minirepo/releases/</url>
+<!--
+      <url>file:///projects/minirepo/releases/</url>
+      <url>file://${project.build.directory}/mvn-repo</url>
+-->
+    </repository>
+
 <!--   For OSSRH on SonaType  -->
 <!--  -->
+<!--
 	<snapshotRepository>
 		<id>sonatype-nexus-snapshots</id>
 		<name>Sonatype Nexus snapshot repository</name>
@@ -77,6 +96,7 @@
 		<name>Sonatype Nexus release staging repository</name>
 		<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 	</repository>
+-->
 <!--  -->
 
 <!--
@@ -195,6 +215,7 @@
 
         <!--   This will be used for both snapshot/release deploy.  -->
 <!--  -->
+<!--
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-gpg-plugin</artifactId>
@@ -212,6 +233,7 @@
             </execution>
           </executions>
         </plugin>
+-->
 
         <!--   Automating OSSRH staging to release  -->
 <!--

@@ -1,5 +1,6 @@
 package org.minijson.builder.impl;
 
+// Note: java.beans packages not supported in Android!!!
 import java.beans.IntrospectionException;
 import java.io.IOException;
 import java.io.StringWriter;
