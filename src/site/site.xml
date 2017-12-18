@@ -22,7 +22,7 @@
       </googleSearch>
       <!-- break exec /www/www.apache.org/dyn/mirrors/mirrors.cgi -->
       <twitter>
-        <user>minijson</user>
+        <user>j4json</user>
         <showUser>true</showUser>
         <showFollowers>false</showFollowers>
       </twitter>
@@ -30,9 +30,9 @@
   </custom>
 
   <bannerLeft>
-    <name>MiniJSON for Java</name>
-    <src>http://www.minijson.org/images/minijson-logo-v1.png</src>
-    <href>http://www.minijson.org/</href>
+    <name>J4Json for Java</name>
+    <src>http://www.j4json.org/images/j4json-logo-v1.png</src>
+    <href>http://www.j4json.org/</href>
   </bannerLeft>
 <!--
   <bannerRight>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="MiniJsonJars" basedir="../.." default="all">
+<project name="J4JsonJars" basedir="../.." default="all">
     <property name="libDir" value="nomaven/lib"/>
     <property name="classesDir" value="nomaven/build/classes"/>
     <property name="apidocDir" value="nomaven/build/apidoc"/>
@@ -44,7 +44,7 @@
     </target>
 
 	<target name="buildCoreClasses" depends="cleanCoreClasses, createOutputDir">
-        <javac srcdir="minijson-core/src/main/java"
+        <javac srcdir="j4json-core/src/main/java"
                  destdir="${classesDir}/core"
                  debug="on"
                  source="1.6"
@@ -52,7 +52,7 @@
         />
     </target>
 	<target name="buildToolClasses" depends="cleanToolClasses, createOutputDir">
-        <javac srcdir="minijson-tool/src/main/java"
+        <javac srcdir="j4json-tool/src/main/java"
                  classpath="${classesDir}/core"
                  destdir="${classesDir}/tool"
                  debug="on"
@@ -61,7 +61,7 @@
         />
     </target>
 	<target name="buildExtClasses" depends="cleanExtClasses, createOutputDir">
-        <javac srcdir="minijson-ext/src/main/java"
+        <javac srcdir="j4json-ext/src/main/java"
                  classpath="${classesDir}/core"
                  destdir="${classesDir}/ext"
                  debug="on"
@@ -74,22 +74,22 @@
 
 
     <target name="createCoreJar" depends="buildCoreClasses, createOutputDir">
-        <jar destfile="${output}/minijson-core-${version}.jar"
+        <jar destfile="${output}/j4json-core-${version}.jar"
              basedir="${classesDir}/core"
-             includes="org/minijson/**"
+             includes="j4json/**"
         />
     </target>
     <target name="createToolJar" depends="buildToolClasses, createOutputDir">
-        <jar destfile="${output}/minijson-tool-${version}.jar"
+        <jar destfile="${output}/j4json-tool-${version}.jar"
              basedir="${classesDir}/tool"
-             includes="org/minijson/tool/**"
+             includes="j4json/tool/**"
         />
     </target>
 	<!-- TBD -->
     <target name="createExtJar" depends="buildExtClasses, createOutputDir">
-        <jar destfile="${output}/minijson-ext-${version}.jar"
+        <jar destfile="${output}/j4json-ext-${version}.jar"
              basedir="${classesDir}/ext"
-             includes="org/minijson/ext/**"
+             includes="j4json/ext/**"
         />
     </target>
 
@@ -106,17 +106,17 @@
 	<target name="copyAllClasses" depends="cleanAllClassesDir, buildAllClasses">
         <copy todir="${classesDir}/all" overwrite="true" flatten="false">
 		    <fileset dir ="${classesDir}/core">
-	            <include name="org/minijson/**" />
+	            <include name="j4json/**" />
 			</fileset>
 		    <fileset dir ="${classesDir}/tool">
-	            <include name="org/minijson/tool/**" />
+	            <include name="j4json/tool/**" />
 			</fileset>
 		</copy>
     </target>
     <target name="createAllJar" depends="copyAllClasses, createOutputDir">
-        <jar destfile="${output}/minijson-all-${version}.jar"
+        <jar destfile="${output}/j4json-all-${version}.jar"
              basedir="${classesDir}/all"
-             includes="org/minijson/**"
+             includes="j4json/**"
         />
     </target>
 
@@ -138,21 +138,21 @@
 
 	<target name="apidoc" depends="createAllJar, cleanApidocDir, createApidocDir" description="Generate javadoc for all modules">
 	    <javadoc destdir="${apidocDir}">
-    	    <packageset dir="minijson-core/src/main/java" defaultexcludes="yes">
-    	      <include name="org/minijson/**"/>
+    	    <packageset dir="j4json-core/src/main/java" defaultexcludes="yes">
+    	      <include name="j4json/**"/>
     	    </packageset>
-    	    <packageset dir="minijson-tool/src/main/java" defaultexcludes="yes">
-    	      <include name="org/minijson/tool/**"/>
+    	    <packageset dir="j4json-tool/src/main/java" defaultexcludes="yes">
+    	      <include name="j4json/tool/**"/>
     	    </packageset>
-    	    <packageset dir="minijson-ext/src/main/java" defaultexcludes="yes">
-    	      <include name="org/minijson/ext/**"/>
+    	    <packageset dir="j4json-ext/src/main/java" defaultexcludes="yes">
+    	      <include name="j4json/ext/**"/>
      	    </packageset>
-	        <doctitle><![CDATA[<h1>MiniJson Miminal JSON Parser - Generator</h1>]]></doctitle>
+	        <doctitle><![CDATA[<h1>J4Json Miminal JSON Parser - Generator</h1>]]></doctitle>
 	        <bottom><![CDATA[<i>Copyright &#169; 2013 Harry Y. All Rights Reserved.</i>]]></bottom>
 	    </javadoc>
 	</target>
 	<target name="createApiDocJar" depends="apidoc">
-        <jar destfile="${output}/minijson-all-${version}-javadoc.jar"
+        <jar destfile="${output}/j4json-all-${version}-javadoc.jar"
              basedir="${apidocDir}"
              includes="**"
         />

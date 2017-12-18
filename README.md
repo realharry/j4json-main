@@ -1,13 +1,13 @@
-MiniJSON for Java
+J4Json - JSON Library in Java
 ========
 
-_A minimal JSON builder - parser in Java._
+_A Java JSON builder - parser library._
 
 
 Synopsis
 ---
 
-MiniJSON is a simple Java library for generating / parsing JSON.
+J4Json is a simple Java library for generating / parsing JSON.
 It provides a simple and yet flexible API.
 
 
@@ -15,41 +15,41 @@ It provides a simple and yet flexible API.
 Getting Started
 ---
 
-If you use Maven, you can (locally) build and install the *minijson* library using standard Maven goals. 
+If you use Maven, you can (locally) build and install the *j4json* library using standard Maven goals. 
 (If you don't use Maven, then there is an ant script under `nomaven/scripts`.)
 Otherwise, you can add, in your project, the following dependency:
 
   	<dependency>
-      <groupId>org.aerysoft.minijson</groupId>
-      <artifactId>minijson-core</artifactId>
+      <groupId>org.j4json</groupId>
+      <artifactId>j4json-core</artifactId>
       <version>0.9.2</version>
   	</dependency>
 
-`MiniJson` is compatible with JDK 1.6 or later.
+`J4Json` is compatible with JDK 1.7 or later.
 
 
 High Level API Design
 ---
 
-`MiniJSON` provides the basic JSON APIs for _parse()_ and _build()_.
-In addition, `MiniJSON` provides two extra sets of APIs, which differentiate itself from other JSON libraries.
+`J4Json` provides the basic JSON APIs for _parse()_ and _build()_.
+In addition, `J4Json` provides two extra sets of APIs, which differentiate itself from other JSON libraries.
 
 
 #### Configurable Parsing/Building
 
-`MiniJSON` includes certain Builder (JSON generator) and Parser classes which take "policy" objects as inputs.
+`J4Json` includes certain Builder (JSON generator) and Parser classes which take "policy" objects as inputs.
 These policy objects can be used to customize the parsing/building operations.
 
 
 #### "Partial" Parsing/Building
 
-This is rather unique to `MiniJSON`.
+This is rather unique to `J4Json`.
 All JSON parsers and JSON generators/builders implement parsing/building as all-or-none operations.
 Given a JSON string, a parser creates an object corresponding to the JSON string.
 Given an object, a builder generates a JSON string representation of the object.
 
 On the other hand, 
-`MiniJSON` includes APIs which can do "partial parsing" or "partial building".
+`J4Json` includes APIs which can do "partial parsing" or "partial building".
 
 
 
@@ -92,11 +92,11 @@ Alternatively, high-level JSON Object/Array wrappers,
 
 
 
-Please refer to [the online API Docs](http://www.minijson.org/repo/apidocs/) for more information.
+Please refer to [the online API Docs](http://www.j4json.org/repo/apidocs/) for more information.
 
 <!--
-Please refer to [the Project wiki pages](https://github.com/harrywye/minijson/wiki/_pages) 
-or [the online API Docs](http://www.minijson.org/repo/apidocs/).
+Please refer to [the Project wiki pages](https://gitlab.com/j4json/main/wiki/_pages) 
+or [the online API Docs](http://www.j4json.org/repo/apidocs/).
 -->
 
 

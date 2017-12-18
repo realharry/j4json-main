@@ -2,7 +2,7 @@ config file support?
 including comments, etc. ???
 
 
-[ Why minijson? ]
+[ Why j4json? ]
 
 * flexible.
 * different api. partial parsing/buidling
@@ -27,7 +27,7 @@ Old method: build a full object from the json string.
             Do modification.
             Build a new json string.
   
-MiniJson:   Build a partial object.
+J4Json:   Build a partial object.
             do modification.
             Build a new json string.
 

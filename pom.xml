@@ -12,14 +12,14 @@
 -->
 
 
-  <groupId>org.minijson</groupId>
-  <artifactId>minijson</artifactId>
+  <groupId>org.j4json</groupId>
+  <artifactId>j4json</artifactId>
   <version>0.9.5-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>MiniJSON</name>
+  <name>J4Json</name>
   <description>A simple JSON parser/generator in Java</description>
-  <url>http://www.minijson.org/</url>
+  <url>http://www.j4json.org/</url>
   <inceptionYear>2013</inceptionYear>
   <licenses>
     <license>
@@ -57,9 +57,9 @@
   </properties>
 
   <scm>
-    <connection>scm:git:ssh://bitbucket.org/javalib/minijson.git</connection>
-    <developerConnection>scm:git:ssh://git@bitbucket.org/javalib/minijson.git</developerConnection>
-    <url>https://bitbucket.org/javalib/minijson</url>
+    <connection>scm:git:ssh://gitlab.com/j4json/main.git</connection>
+    <developerConnection>scm:git:ssh://git@gitlab.com/j4json/main.git</developerConnection>
+    <url>https://gitlab.com/j4json/main</url>
     <tag>HEAD</tag>
   </scm>
 
@@ -108,9 +108,9 @@
 -->
 <!--
     <site>
-      <id>minijson.home</id>
-      <name>MiniJSON Project Home Page</name>
-      <url>scp://www.minijson.org/</url>
+      <id>j4json.home</id>
+      <name>J4Json Project Home Page</name>
+      <url>scp://www.j4json.org/</url>
     </site>
 -->
   </distributionManagement>
@@ -282,7 +282,7 @@
 	          <branch>refs/heads/mvn-repo</branch>
 	          <includes><include>**/*</include></includes>
 	          <repositoryOwner>harrywye</repositoryOwner>
-	          <repositoryName>minijson</repositoryName>
+	          <repositoryName>j4json</repositoryName>
 	        </configuration>
           </execution>
 -->
@@ -318,8 +318,8 @@
   </dependencies>
 
   <modules>
-    <module>minijson-core</module>
-    <module>minijson-ext</module>
-    <module>minijson-tool</module>
+    <module>j4json-core</module>
+    <module>j4json-ext</module>
+    <module>j4json-tool</module>
   </modules>
 </project>
